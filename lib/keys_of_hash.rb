@@ -5,7 +5,7 @@ class Hash
     array = []
     self.each do |key, values|
       binding.pry
-      if values == arguments.include?(values)
+      if arguments.include?(values)
         array.push(key)
       end
     end
