@@ -1,8 +1,9 @@
-
+require 'pry'
 
 class Hash
   def keys_of(*arguments, value)
     arguments.each do |key, values|
+      binding.pry
       array = []
       if value == values
         array.push(key)
@@ -11,3 +12,5 @@ class Hash
     array
   end
 end
+
+# i cant hear you? 
