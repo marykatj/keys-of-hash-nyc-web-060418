@@ -1,11 +1,11 @@
 require 'pry'
 
 class Hash
-  def keys_of(*arguments, value)
-    arguments.each do |key, values|
+  def keys_of(*arguments)
+    array = []
+    self.each do |key, values|
       binding.pry
-      array = []
-      if value == values
+      if values == arguments.include?(values)
         array.push(key)
       end
     end
@@ -13,4 +13,4 @@ class Hash
   end
 end
 
-# i cant hear you? 
+# i cant hear you?
